@@ -3,6 +3,11 @@
 An operating system where you can only play snake on.
 
 Big thank you to the tutorial from phil-opp: https://os.phil-opp.com/
+
+A picture of SnakeOS in an emulator
+<img src = "images/img.png">
+
+SnakeOS is build as a learning projects to learn the systems programming basics in rust.
 ## Building
 
 This project requires a nightly version of Rust because it uses some unstable features. At least nightly _2020-07-15_ is required for building. You might need to run `rustup update nightly --force` to update to the latest nightly even if some components such as `rustfmt` are missing it.

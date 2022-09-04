@@ -1,8 +1,8 @@
 [package]
-name = "blog_os"
+name = "SnakeOS"
 version = "0.1.0"
-authors = ["Philipp Oppermann <dev@phil-opp.com>"]
-edition = "2018"
+authors = ["Stan Mijten"]
+edition = "2021"
 
 [dependencies]
 bootloader = "0.9.8"
