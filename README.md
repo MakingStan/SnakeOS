@@ -1,13 +1,8 @@
-# Blog OS (A Minimal Rust Kernel)
+# SnakeOS
 
-[![Build Status](https://github.com/phil-opp/blog_os/workflows/Code/badge.svg?branch=post-02)](https://github.com/phil-opp/blog_os/actions?query=workflow%3A%22Code%22+branch%3Apost-02)
+An operating system where you can only play snake on.
 
-This repository contains the source code for the [A Minimal Rust Kernel][post] post of the [Writing an OS in Rust](https://os.phil-opp.com) series.
-
-[post]: https://os.phil-opp.com/minimal-rust-kernel/
-
-**Check out the [master branch](https://github.com/phil-opp/blog_os) for more information.**
-
+Big thank you to the tutorial from phil-opp: https://os.phil-opp.com/
 ## Building
 
 This project requires a nightly version of Rust because it uses some unstable features. At least nightly _2020-07-15_ is required for building. You might need to run `rustup update nightly --force` to update to the latest nightly even if some components such as `rustfmt` are missing it.
