@@ -75,7 +75,7 @@ impl Writer {
                     self.new_line();
                 }
 
-                let row = BUFFER_HEIGHT-1;
+                let row = 0;
                 let col = self.column_position;
 
                 let color_code = self.color_code;
@@ -83,6 +83,7 @@ impl Writer {
                     ascii_character: byte,
                     color_code,
                 });
+
                 self.column_position += 1;
             }
         }
@@ -124,6 +125,7 @@ impl Writer {
                 _ => self.write_byte(0xfe)
             }
         }
+        self.column_position = 0;
     }
 
     fn new_line(&mut self) {

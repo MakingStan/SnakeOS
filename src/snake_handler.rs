@@ -1,3 +1,4 @@
+use pc_keyboard::KeyCode::W;
 use vga_buffer::WRITER;
 use crate::{Color, vga_buffer, interrupts};
 use crate::interrupts::Direction;
@@ -12,6 +13,7 @@ struct Position {
 }
 pub fn game_loop()
 {
+    let mut length = 4;
     let mut x = 3;
     let mut y =  0;
     let mut next_x = 0;
@@ -82,11 +84,13 @@ pub fn game_loop()
                 WRITER.lock().fill_block(Color::LightGreen, Color::LightGreen, snake_body[i].x, snake_body[i].y);
             }
         }
-        //render the apple and the snakes head.
+        //render the apple and the snakes head and the length.
         x = next_x;
         y = next_y;
         WRITER.lock().fill_block(Color::Red, Color::Red, last_apple_position.x, last_apple_position.y);
         WRITER.lock().fill_block(Color::Green, Color::Green, x, y);
+        crate::print!("{}", length);
+
 
         //if we hit an apple we should spawn a new one and add a new body part. (it'll follow automatically with our structure)
         //so the position doesn't matter
@@ -97,6 +101,7 @@ pub fn game_loop()
                 y: 0,
             };
             next_index_to_update-=1;
+            length+=1;
         }
 
 
